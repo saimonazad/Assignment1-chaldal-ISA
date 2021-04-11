@@ -1,0 +1,291 @@
+:root {
+  --mainBackgroundColor: rgba(248, 248, 249, 1);
+
+  --profilePicBorderColor: rgba(255, 255, 255, 1);
+  --profileNameColor: rgba(255, 255, 255, 1);
+  --profileTitleColor: rgba(154, 154, 190, 1);
+  --profileSubTitleColor: rgba(154, 154, 190, 1);
+
+  --workshopBackgroundColor: rgba(255, 255, 255, 1);
+  --workshopShadowColor: rgba(1, 54, 134, 0.1);
+  --workshopTagColor: rgba(114, 131, 145, 1);
+  --workshopTitleColor: rgba(16, 0, 169, 1);
+  --workshopTimeColor: rgba(170, 170, 190, 1);
+  --workshopLinksColor: rgba(0, 98, 255, 1);
+
+  --sidebarBackgroundColor: rgba(11, 42, 90, 1);
+  --sidebarLinkColor: rgba(154, 154, 190, 1);
+  --sidebarLinkHoverColor: rgba(96, 217, 26, 1);
+
+  --genericBoxBackgroundColor: rgba(107, 0, 188, 1);
+  --genericBoxTextColor: rgba(255, 255, 255, 1);
+  --genericBoxIconColor: rgba(255, 255, 255, 1);
+
+  --tabSelectedBackgroundColor: rgba(0, 98, 255, 1);
+  --tabSelectedShadowColor: rgba(0, 98, 255, 0.3);
+  --tabSelectedTextColor: rgba(255, 255, 255, 1);
+
+  --tabBackgroundColor: rgba(232, 236, 241, 1);
+  --tabTextColor: rgba(114, 131, 145, 1);
+
+  /* ------sidebar width values------*/
+  --sidebarWidthDesktop: 290px;
+}
+
+html {
+  font-size: 16px;
+}
+a {
+  text-decoration: none;
+}
+body {
+  font-family: "Open Sans", sans-serif;
+  background-color: var(--mainBackgroundColor);
+  position: relative;
+}
+.page-wrapper {
+  max-width: 1300px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: stretch;
+}
+/*-----------------------------------navbar css starts------------------------------------------------ */
+
+.nav {
+  max-width: 1680px;
+  margin: 0 auto;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding-left: 20px;
+  padding-right: 20px;
+  height: 85px;
+}
+.nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style-type: none;
+  margin-bottom: 0;
+  align-items: center;
+}
+
+.nav ul li {
+  margin-left: 25px;
+}
+.nav ul a {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 12px;
+  color: #000;
+}
+.sign-in {
+  margin-left: 25px;
+  
+}
+
+.sign-in a {
+  color: rgb(0, 123, 255);
+}
+.sign-in i {
+  vertical-align: middle;
+  padding-right: 6px;
+  color: rgb(0, 123, 255);
+}
+.nav ul li.sign-in {
+  margin-left: 220px;
+}
+.sign-up {
+  background-color: #60d91a;
+  box-shadow: 0px 10px 20px #60d91a4d;
+  padding: 8px 15px;
+  border-radius: 4px;
+}
+.sign-up a {
+  color: #ffffff !important;
+}
+.nav .nav-toggle {
+  display: none;
+  height: 30px;
+  width: 30px;
+  cursor: pointer;
+  background-image: url(../nav/menu.svg);
+  background-size: cover;
+  background-position: 50%;
+}
+
+@media (max-width: 998.98px) {
+  .nav ul li.sign-in {
+    margin-left: 25px;
+  }
+  .nav .nav-toggle {
+    display: block;
+  }
+  body {
+    position: absolute;
+  }
+}
+.nav .nav-toggle.opened {
+  background-image: url(../nav/close.svg);
+  background-size: 30px 30px;
+}
+
+@media (max-width: 991.98px) {
+  .nav ul {
+    z-index: 100;
+    display: block;
+    position: absolute;
+    right: 20px;
+    background-color: #fff;
+    padding: 20px 30px;
+    -webkit-box-shadow: 0 0 3px rgb(0 0 0 / 20%);
+    box-shadow: 0 0 3px rgb(0 0 0 / 20%);
+    visibility: hidden;
+    opacity: 0;
+    top: 100px;
+    -webkit-transition-duration: 0.25s;
+    transition-duration: 0.25s;
+    -webkit-transition-property: opacity, visibility, top;
+    transition-property: opacity, visibility, top;
+  }
+  .nav ul.show {
+    visibility: visible;
+    opacity: 1;
+    top: 70px;
+  }
+}
+
+/*-----------------------------------sidebar css starts------------------------------------------------ */
+
+.sidebar {
+  background: var(--sidebarBackgroundColor);
+  flex: 1 0 290px;
+}
+
+#sideNavSelected {
+  color: var(--sidebarLinkHoverColor);
+  border-left: 5px solid var(--sidebarLinkHoverColor);
+}
+#sideNavSelected a {
+  color: var(--sidebarLinkHoverColor);
+}
+
+#sideNavSelected img {
+  filter: invert(86%) sepia(30%) saturate(6236%) hue-rotate(48deg)
+    brightness(101%) contrast(85%);
+}
+/*----------profile component------- */
+
+.profile {
+  text-align: center;
+}
+
+.profile__image {
+  border-radius: 50%;
+  border: 2px solid var(--profilePicBorderColor);
+  margin: 50px 0px;
+}
+
+.profile__name {
+  color: var(--profileNameColor);
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+  font-weight: 600;
+}
+
+.profile__title {
+  color: var(--profileTitleColor);
+  font-size: 1rem;
+  line-height: 2.1875rem;
+  font-weight: 600;
+}
+.profile__subTitle {
+  color: var(--profileSubTitleColor);
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+/****sidebar links component******/
+
+.sideNav {
+  margin: 50px 0;
+}
+.sideNav li a {
+  color: var(--sidebarLinkColor);
+}
+.sideNav li {
+  text-transform: uppercase;
+  font-size: 0.875rem;
+  font-weight: bold;
+  padding: 20px 0;
+  cursor: pointer;
+}
+.sideNav li img {
+  vertical-align: middle;
+  margin-right: 17px;
+  margin-left: 30px;
+  width: 34px;
+  height: 30px;
+}
+
+.message {
+  position: relative;
+}
+.message__count {
+  height: 22px;
+  width: 22px;
+  position: absolute;
+  text-align: center;
+  top: 14px;
+  left: 50px;
+  color: #ffffff;
+  background-color: #df0000;
+  border-radius: 50%;
+  padding: 2px;
+  font-size: 0.75rem;
+}
+
+/************************************sidebar css ends********************************************************/
+
+.content {
+  padding: 0 50px;
+}
+
+@media (max-width: 1199.98px) {
+  .sideNav li span,
+  .profile {
+    display: none;
+  }
+  .sidebar {
+    position: absolute;
+    height: 100%;
+    flex: 1 0 auto;
+    z-index: 10;
+  }
+  .sideNav li img {
+    margin-left: 17px;
+  }
+
+  .content {
+    padding: 0px 20px 0px 100px;
+  }
+  .message__count {
+    left: 36px;
+  }
+
+  /*mobile sidenav hover to open*/
+  .sidebar:hover .profile {
+    display: block;
+  }
+  .sidebar:hover {
+    width: 290px;
+  }
+  .sidebar:hover li span {
+    display: inline-block;
+  }
+}

@@ -1,0 +1,38 @@
+.my-workshop-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 20px 20px;
+}
+.workshop__card {
+  box-shadow: 0px 5px 10px #01368619;
+  padding: 1rem;
+  border-radius: 10px;
+}
+.workshop__card--img {
+  width: 100%;
+}
+.workshop__card--content .title {
+  font-size: 1rem;
+  margin: 0.4rem 0 1rem 0;
+  font-weight: 600;
+}
+.workshop__card--content time {
+  font-size: 0.875rem;
+  color: #728391;
+}
+@media screen and (max-width: 768px) {
+  .my-workshop-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+}
+
+@media screen and (max-width: 575.98px) {
+  .my-workshop-container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 2rem;
+  }
+}

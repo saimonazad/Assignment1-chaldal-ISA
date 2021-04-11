@@ -1,0 +1,180 @@
+/*********************stat of Earning/Payment Section******************************************************/
+.stats {
+    display: flex;
+    justify-content: space-between;
+  }
+  .stats__box {
+    flex: 0 1 30%;
+    background-color: var(--genericBoxBackgroundColor);
+    color: var(--genericBoxTextColor);
+    padding: 25px 20px;
+    border-radius: 10px;
+    
+  }
+  .stats__box--title {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    font-weight: 600;
+  }
+  .stats__box--amount {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 8px;
+  }
+  .stats__box--amount h2 {
+    font-size: 2rem;
+    font-weight: normal;
+  }
+  .stats__box--amount i {
+    font-size: 1.875rem;
+  }
+  /* Extra small devices (phones, 600px and down) */
+  @media only screen and (max-width: 600px) {
+    .stats {
+      flex-direction: column;
+    }
+    .stats__box {
+      margin-bottom: 15px;
+    }
+  }
+  
+  /*********************Tab Section******************************************************/
+  .tabs {
+    margin-top: 2.188rem;
+    margin-bottom: 1.875rem;
+    display: flex;
+    justify-content: space-between;
+  }
+  .tabs__item {
+    flex: 0 1 30%;
+    background-color: var(--tabBackgroundColor);
+    color: var(--tabTextColor);
+    padding: 12px 0;
+    border-radius: 50px;
+    cursor: pointer;
+    text-align: center;
+    font-size: 0.875rem;
+  }
+  
+  #tabs__selected {
+    background-color: var(--tabSelectedBackgroundColor);
+    color: var(--tabSelectedTextColor);
+    box-shadow: 0px 10px 20px var(--tabSelectedShadowColor);
+  }
+  .tabs__item:hover {
+    background-color: var(--tabSelectedBackgroundColor);
+    color: var(--tabSelectedTextColor);
+    box-shadow: 0px 10px 20px var(--tabSelectedShadowColor);
+  }
+  
+  /***********************workshop section******************************/
+  
+  .workshop__item {
+    border-radius: 10px;
+    box-shadow: 0px 5px 10px var(--workshopShadowColor);
+    background-color: #fff;
+    margin-bottom: 20px;
+  }
+  .workshop__info {
+    display: flex;
+    padding: 20px;
+  }
+  .workshop__thumbnail {
+    flex: 0 0 31%;
+    margin-right: 4%;
+  }
+  .workshop__thumbnail img {
+    height: 100%;
+    width: 100%;
+  }
+  .workshop__details {
+    flex: 0 0 59%;
+  }
+  .workshop__details {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .workshop__details--top--tag {
+    font-size: 0.875rem;
+    line-height: 1.5rem;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: var(--workshopTagColor);
+  }
+  .workshop__details--top--title {
+    font-size: 1.5rem;
+    line-height: 1.875rem;
+    margin-bottom: 5px;
+    font-weight: 400;
+    color: var(--workshopTitleColor);
+  }
+  .workshop__details--top--time {
+    font-size: 0.875rem;
+    line-height: 1.5rem;
+    font-weight: normal;
+    color: var(--workshopTimeColor);
+  }
+  
+  .workshop__details--bottom {
+    display: flex;
+    justify-content: space-between;
+  }
+  .workshop__details--bottom h3 {
+    font-size: 0.875rem;
+    font-weight: bold;
+    color: var(--workshopTagColor);
+    margin-bottom: 3px;
+  }
+  .workshop__details--bottom h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--workshopTitleColor);
+  }
+  .workshop__links {
+    border-top: 5px solid var(--mainBackgroundColor);
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 50px;
+  }
+  .workshop__links--group {
+    flex: 1 0;
+    display: flex;
+    justify-content: space-evenly;
+  }
+  .workshop__links--group a {
+    color: var(--workshopLinksColor);
+    font-size: 0.875rem;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    letter-spacing: 0.125rem;
+  }
+  .workshop__links--icons {
+    margin-left: 12%;
+  }
+  .workshop__links--icons i {
+    padding-left: 20px;
+    color: var(--workshopTagColor);
+  }
+  @media only screen and (max-width: 600px) {
+    .workshop__info {
+      flex-direction: column;
+    }
+    .workshop__details--top {
+      margin-bottom: 15px;
+    }
+    .workshop__details--bottom h2{
+      font-size: 1.5rem;
+    }
+    .workshop__links{
+      padding: 15px 20px;
+    }
+    .workshop__links--group a{
+      font-size: 0.7rem;
+      letter-spacing: 0;
+    }
+    .workshop__links--icons {
+      margin-left: 0;
+  }
+  }
